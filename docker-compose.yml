@@ -1,14 +1,8 @@
-version: '3'
+version: "3"
 services:
   node-app:
     build: .
     ports:
       - "3000:3000"
-    volumes:
-      - ./:/app     
-      # dont need to specify entire path for bind mount
-      - /app/node_modules
     environment:
       - PORT=3000
-    # env_file:
-    #   - ./.env

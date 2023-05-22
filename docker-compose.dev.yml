@@ -10,5 +10,11 @@ services:
       - /app/node_modules
     environment:
       - NODE_DEV=development
+      - MONGO_USER=vaibhav
+      - MONGO_PASSWORD=mypassword
     command: npm run dev
-    # overwrite hone wala hain vaise bhi
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=vaibhav
+      - MONGO_INITDB_ROOT_PASSWORD=mypassword
+

@@ -12,6 +12,7 @@ const {
 app.use(express.json())
 
 const postRouter = require("./routes/postRoutes") 
+const userRouter = require("./routes/userRoutes") 
 
 const mongoose = require("mongoose");
 
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/v1/posts",postRouter)
+app.use("/api/v1/users",userRouter)
  
 const port = process.env.PORT || 3000;
 
